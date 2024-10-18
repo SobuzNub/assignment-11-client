@@ -24,7 +24,7 @@ const Navbar = () => {
             setTheme('light')
         }
     }
-    console.log(theme)
+    // console.log(theme)
 
     const handleLogOut = async ()=>{
         try{
@@ -39,8 +39,8 @@ const Navbar = () => {
         <div className="sm:flex md:gap-3 items-center justify-center">
             <li><NavLink to='/' className={({ isActive }) => isActive ? 'text-purple-600 border p-2 rounded-md border-purple-600 font-mono' : 'font-normal'}>Home</NavLink></li>
             <li><NavLink to='/addBook' className={({ isActive }) => isActive ? 'text-purple-600 border p-2 rounded-md border-purple-600 font-mono' : 'font-normal'}>Add Book</NavLink></li>
-            <li><NavLink to='/all-books' className={({ isActive }) => isActive ? 'text-purple-600 border p-2 rounded-md border-purple-600 font-mono' : 'font-normal'}>All Books</NavLink></li>
-            <li><NavLink to='/borrowed-books' className={({ isActive }) => isActive ? 'text-purple-600 border p-2 rounded-md border-purple-600 font-mono' : 'font-normal'}>Borrowed Books</NavLink></li>
+            <li><NavLink to='/allBook' className={({ isActive }) => isActive ? 'text-purple-600 border p-2 rounded-md border-purple-600 font-mono' : 'font-normal'}>All Books</NavLink></li>
+            <li><NavLink to='/borrowedBooks' className={({ isActive }) => isActive ? 'text-purple-600 border p-2 rounded-md border-purple-600 font-mono' : 'font-normal'}>Borrowed Books</NavLink></li>
             <li><NavLink to='/register' className={({ isActive }) => isActive ? 'text-purple-600 border p-2 rounded-md border-purple-600 font-mono' : 'font-normal'}>Register</NavLink></li>
             {
                 user ? <li><NavLink onClick={handleLogOut} className={({ isActive }) => isActive ? 'text-purple-600 border p-2 rounded-md border-purple-600 font-mono' : 'font-normal'}>Logout</NavLink></li> : <li><NavLink to='/login' className={({ isActive }) => isActive ? 'text-purple-600 border p-2 rounded-md border-purple-600 font-mono' : 'font-normal'}>Login</NavLink></li>

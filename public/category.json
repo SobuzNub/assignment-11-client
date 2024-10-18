@@ -1,0 +1,23 @@
+[
+    {
+      "name": "The Enchanted Forest",
+      "image": "https://i.ibb.co.com/M92cbnD/fantacy.jpg",
+      "category": "Fantasy"
+    },
+    {
+      "name": "Space Chronicles",
+      "image": "https://i.ibb.co.com/KXtn8Xf/science-fiction.jpg",
+      "category": "Science Fiction"
+    },
+    {
+      "name": "The Art of Mindfulness",
+      "image": "https://i.ibb.co.com/GxFmwnD/self-help.jpg",
+      "category": "Self-Help"
+    },
+    {
+      "name": "Mysteries of the Ancient World",
+      "image": "https://i.ibb.co.com/GHL6jHb/history.jpg",
+      "category": "History"
+    }
+  ]
+  

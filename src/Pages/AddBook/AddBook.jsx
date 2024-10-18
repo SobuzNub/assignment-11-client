@@ -1,9 +1,31 @@
+import { useMutation } from "@tanstack/react-query";
+import useAxiosPublic from "../../hooks/useAxiosPublic";
+import { useState } from "react";
+import toast from "react-hot-toast";
+import { Helmet } from "react-helmet-async";
 
 
 const AddBook = () => {
 
-    const handleAddBook = e =>{
+    const axiosPublic = useAxiosPublic();
+    const [loading, setLoading] = useState(false)
+
+    const { mutateAsync } = useMutation({
+        mutationFn: async bookData => {
+            const { data } = await axiosPublic.post('/book', bookData)
+            return data;
+        },
+        onSuccess: () => {
+            console.log('Data Saved Successfully')
+            toast.success("Room Added Successfully!")
+            setLoading(false)
+        }
+    })
+
+
+    const handleAddBook = async e => {
         e.preventDefault();
+        setLoading(true)
         const form = e.target;
         const name = form.name.value;
         const image = form.image.value;
@@ -13,11 +35,32 @@ const AddBook = () => {
         const rating = form.rating.value;
         const description = form.description.value;
 
-        console.log({name, image, quantity, category, author, rating, description});
+        try {
+            const bookData = {
+                name,
+                image,
+                quantity,
+                category,
+                author,
+                rating,
+                description
+            }
+            console.log(bookData);
+
+            await mutateAsync(bookData)
+
+        } catch (err) {
+            console.log(err);
+            toast.error(err.message)
+            setLoading(false)
+        }
     }
 
     return (
         <div>
+            <Helmet>
+                <title>Add Book ||</title>
+            </Helmet>
             <div className='flex justify-center items-center min-h-[calc(100vh-306px)] my-12'>
                 <section className=' p-2 md:p-6 mx-auto bg-white rounded-md shadow-md '>
                     <h2 className='text-lg font-semibold text-gray-700 capitalize '>
@@ -114,7 +157,7 @@ const AddBook = () => {
                         </div>
                         <div className='flex justify-center mt-6'>
 
-                            <input type="submit" value="Add Book" className="px-8 py-2.5 leading-5 text-white transition-colors duration-300 transhtmlForm bg-gray-700 rounded-md hover:bg-gray-600 focus:outline-none focus:bg-gray-600 w-full" />
+                            <input type="submit" value="Add Book" className="px-8 py-2.5 leading-5 text-white transition-colors duration-300 transhtmlForm bg-purple-600 rounded-md hover:bg-purple-500 focus:outline-none focus:bg-gray-600 w-full" />
                         </div>
                     </form>
                 </section>

@@ -1,0 +1,59 @@
+[
+    {
+      "name": "The Dragon's Quest",
+      "image": "https://i.ibb.co.com/M92cbnD/fantacy.jpg",
+      "author": "Ariana Storm",
+      "category": "Fantasy",
+      "rating": "4.7"
+    },
+    {
+      "name": "Galactic Empire",
+      "image": "https://i.ibb.co.com/KXtn8Xf/science-fiction.jpg",
+      "author": "Marcus Reed",
+      "category": "Science Fiction",
+      "rating": "4.5"
+    },
+    {
+      "name": "Mind Over Matter",
+      "image": "https://i.ibb.co.com/GxFmwnD/self-help.jpg",
+      "author": "Leah Moore",
+      "category": "Self-Help",
+      "rating": "4.8"
+    },
+    {
+      "name": "The Lost Kingdom",
+      "image": "https://i.ibb.co.com/dDBGRqf/fan.jpg",
+      "author": "Brandon Night",
+      "category": "Fantasy",
+      "rating": "4.6"
+    },
+    {
+      "name": "Journey to Mars",
+      "image": "https://i.ibb.co.com/Df5Kyxr/sci.jpg",
+      "author": "Samantha Taylor",
+      "category": "Science Fiction",
+      "rating": "4.4"
+    },
+    {
+      "name": "Unlock Your Potential",
+      "image": "https://i.ibb.co.com/VwRkf5P/self.jpg",
+      "author": "Natalie King",
+      "category": "Self-Help",
+      "rating": "4.9"
+    },
+    {
+      "name": "Empires of the Past",
+      "image": "https://i.ibb.co.com/GHL6jHb/history.jpg",
+      "author": "Jonathan Greene",
+      "category": "History",
+      "rating": "4.3"
+    },
+    {
+      "name": "The Pharaoh's Legacy",
+      "image": "https://i.ibb.co.com/3ktHJZm/his.jpg",
+      "author": "Isabella Jones",
+      "category": "History",
+      "rating": "4.6"
+    }
+  ]
+  
