@@ -89,7 +89,7 @@ const BorrowBook = ({ borrow, refetch }) => {
                         aria-hidden='true'
                         className='absolute inset-0 bg-red-200 opacity-50 rounded-full'
                     ></span>
-                    <span className='relative'>Cancel</span>
+                    <span className='relative'>Return</span>
                 </button>
                 {/* delete modal */}
                 <DeleteModal isOpen={isOpen} closeModal={closeModal} handleDelete={handleDelete} id={borrow?._id}></DeleteModal>
