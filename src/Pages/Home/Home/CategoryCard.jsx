@@ -21,7 +21,7 @@ const CategoryCard = () => {
     console.log(category);
 
     return (
-        <div className="md:grid md:grid-cols-3 gap-5 max-w-screen-xl mx-auto mt-5">
+        <div className="md:grid md:grid-cols-3 gap-5 max-w-screen-xl mx-auto mt-5 mb-10">
             {
                 category.map(cate => <CategorySubCard key={cate._id} cate={cate}></CategorySubCard>)
             }
