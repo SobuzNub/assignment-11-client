@@ -13,7 +13,7 @@ const UpdateBook = () => {
     const { image, name, author, category, rating, quantity, description, _id } = book;
     console.log(book)
 
-    const handleUpdateBook = async e =>{
+    const handleUpdateBook = async e => {
         e.preventDefault()
         const form = e.target
         const name = form.name.value;
@@ -24,15 +24,15 @@ const UpdateBook = () => {
         const rating = form.rating.value;
         const description = form.description.value;
 
-        const updateBook = {name, image, quantity, category, author, rating, description}
+        const updateBook = { name, image, quantity, category, author, rating, description }
         console.log(updateBook);
 
-        try{
-            const {data} = await axiosPublic.put(`/book/${_id}`, updateBook)
+        try {
+            const { data } = await axiosPublic.put(`/book/${_id}`, updateBook)
             console.log(data);
             toast.success('Update room successfully')
             navigate('/allBook')
-        }catch(err){
+        } catch (err) {
             toast.error(err.message)
             console.log(err);
         }
@@ -105,11 +105,10 @@ const UpdateBook = () => {
                                         className='border p-2 rounded-md'
                                         defaultValue={category}
                                     >
-                                        <option value='Noble'>Noble</option>
-                                        <option value='Thriller'>Thriller</option>
-                                        <option value='History'>History</option>
-                                        <option value='Drama'>Drama</option>
-                                        <option value='Sci-Fi'>Sci-Fi</option>
+                                        <option value='Noble'>Fantasy</option>
+                                        <option value='Thriller'>Self-Help</option>
+                                        <option value='History'>Science Fiction</option>
+                                        <option value='Drama'>History</option>
                                     </select>
                                 </div>
                                 <div>

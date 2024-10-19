@@ -114,11 +114,10 @@ const AddBook = () => {
                                     id='category'
                                     className='border p-2 rounded-md'
                                 >
-                                    <option value='Noble'>Noble</option>
-                                    <option value='Thriller'>Thriller</option>
-                                    <option value='History'>History</option>
-                                    <option value='Drama'>Drama</option>
-                                    <option value='Sci-Fi'>Sci-Fi</option>
+                                    <option value='Noble'>Fantasy</option>
+                                    <option value='Thriller'>Self-Help</option>
+                                    <option value='History'>Science Fiction</option>
+                                    <option value='Drama'>History</option>
                                 </select>
                             </div>
                             <div>
